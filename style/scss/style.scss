@@ -38,6 +38,16 @@ body {
   flex-direction: column;
 }
 
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
 #bg-top {
   height: 75vh;
   position: absolute;
@@ -278,6 +288,9 @@ main > .primary {
   body {
     height: max-content;
     align-items: center;
+    
+
+    width: 100vw;
   }
   #bg-top {
     width: 100%;
