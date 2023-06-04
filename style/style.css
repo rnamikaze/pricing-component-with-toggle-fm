@@ -248,10 +248,12 @@ main > .primary {
   }
 }
 @media screen and (min-width: 240px) and (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
   body {
     height: max-content;
     align-items: center;
-    overflow-x: hidden;
   }
   #bg-top {
     width: 100%;
