@@ -1,0 +1,324 @@
+// ## Colors
+
+// ### Primary
+
+// Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+$gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$gradient-with-opacity: linear-gradient(
+  hsla(236, 72%, 79%, 0.5),
+  hsla(237, 63%, 64%, 0.5)
+);
+
+// ### Neutral
+
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 90%;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: $Very-Light-Grayish-Blue;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#bg-top {
+  height: 75vh;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  z-index: 0;
+}
+
+#bg-bottom {
+  height: 35vh;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  z-index: 0;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header > * {
+  margin: 1.2vh 0px;
+}
+
+header > h1 {
+  color: $Grayish-Blue;
+}
+header > .price-plan {
+  color: $Light-Grayish-Blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > .price-plan > * {
+  padding: 10px 15px;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  background-image: $gradient;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+.toggle:hover {
+  background-image: $gradient-with-opacity;
+}
+
+.toggle > .toggle-dot {
+  background-color: white;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(.34,.99,.62,.6);
+}
+.toggle.active > .toggle-dot {
+  transform: translate(-22px, 0px);
+}
+
+main {
+  width: 100%;
+  height: 70vh;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > * {
+  width: 25%;
+  height: 85%;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(198, 198, 198, 0.3);
+
+  padding: 27px;
+}
+
+.pricing-table:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.pricing-table:last-child {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.pricing-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pricing-table-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.pricing-table-head > * {
+  color: $Grayish-Blue;
+}
+
+.pricing-table-head > .pricing-price {
+  margin-top: 15px;
+  font-size: 3.8em;
+  color: $Dark-Grayish-Blue;
+}
+
+.pricing-info {
+  flex-grow: 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pricing-info > .info-item {
+  flex-grow: 1;
+  max-height: 50px;
+  color: $Grayish-Blue;
+  border-top: 1px solid hsla(232, 13%, 33%, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing-info > .info-item:last-child {
+  border-bottom: 1px solid hsla(232, 13%, 33%, 0.3);
+}
+
+.pricing-button {
+  background-color: $Very-Light-Grayish-Blue;
+  background-image: $gradient;
+  color: $Very-Light-Grayish-Blue;
+
+  height: 45px;
+  border-radius: 5px;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  border: 1px solid $Very-Light-Grayish-Blue;
+  transition: 300ms;
+}
+
+.pricing-button:hover {
+  border: 1px solid hsl(237, 63%, 64%);
+  background-color: transparent;
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+}
+
+// Pricing Table Primary
+main > .primary {
+  height: 100%;
+  background-image: $gradient;
+  box-shadow: none;
+  z-index: 2;
+}
+
+.primary > div {
+  height: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.primary .pricing-info > .info-item {
+  color: $Very-Light-Grayish-Blue;
+  border-color: hsla(240, 78%, 98%, 0.3);
+}
+
+.primary .pricing-table-head > * {
+    color: $Very-Light-Grayish-Blue;
+}
+
+.primary .pricing-button {
+  background-image: none;
+  color: hsl(237, 63%, 64%);
+}
+
+.primary .pricing-button:hover {
+  border: 1px solid $Very-Light-Grayish-Blue;
+  background-color: transparent;
+  color: $Very-Light-Grayish-Blue;
+}
+
+.attribution {
+  position: fixed;
+
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(237, 63%, 64%);
+}
+.attribution a {
+  color: $Dark-Grayish-Blue;
+}
+
+
+@media screen and (min-width: 800px) and (min-height: 840px) {
+  header {
+    height: 25vh;
+  }
+  main {
+    height: 57%;
+  }
+  .pricing-price {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 480px) {
+  body {
+    height: max-content;
+    align-items: center;
+  }
+  #bg-top {
+    width: 100%;
+    right: -180px;
+    top: -5vh;
+  }
+  #bg-bottom {
+    display: none;
+  }
+  main {
+    width: 88%;
+    height: max-content;
+    flex-direction: column;
+  }
+  main > * {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+  
+    padding: 27px;
+
+    margin-bottom: 30px;
+  }
+  main > .primary {
+    height: 450px;
+  }
+
+  .primary > div {
+    height: 100%;
+  }
+
+  .pricing-table:first-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .pricing-table:last-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .attribution {
+    z-index: 3;
+  }
+}

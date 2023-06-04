@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Pricing Component with Toggle</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <img id="bg-top" src="./images/bg-top.svg" alt="background top image" />
+    <img
+      id="bg-bottom"
+      src="./images/bg-bottom.svg"
+      alt="background bottom image"
+    />
+    <header>
+      <h1>Our Pricing</h1>
+
+      <div class="price-plan">
+        <div>Annually</div>
+        <div id="toggle" class="toggle">
+          <div class="toggle-dot"></div>
+        </div>
+        <div>Monthly</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pricing-table">
+        <div class="pricing-table-head">
+          <div class="pricing-table-head-title">Basic</div>
+          <div class="pricing-price">&dollar;19.99</div>
+        </div>
+        <div class="pricing-info">
+          <div class="info-item">500 GB Storage</div>
+          <div class="info-item">2 Users Allowed</div>
+          <div class="info-item">Send up to 3 GB</div>
+        </div>
+        <div class="pricing-button">learn more</div>
+      </div>
+
+      <div class="pricing-table primary">
+        <div>
+          <div class="pricing-table-head">
+            <div class="pricing-table-head-title">Professional</div>
+            <div class="pricing-price">&dollar;24.99</div>
+          </div>
+          <div class="pricing-info">
+            <div class="info-item">1 TB Storage</div>
+            <div class="info-item">5 Users Allowed</div>
+            <div class="info-item">Send up to 10 GB</div>
+          </div>
+          <div class="pricing-button">learn more</div>
+        </div>
+      </div>
+
+      <div class="pricing-table">
+        <div class="pricing-table-head">
+          <div class="pricing-table-head-title">Master</div>
+          <div class="pricing-price">&dollar;39.99</div>
+        </div>
+        <div class="pricing-info">
+          <div class="info-item">2 TB Storage</div>
+          <div class="info-item">10 Users Allowed</div>
+          <div class="info-item">Send up to 20 GB</div>
+        </div>
+        <div class="pricing-button">learn more</div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://instagram.com/yusufbagus_s" target="_blank">Ryuzen Namikaze</a>.
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
