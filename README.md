@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Github Pages](https://your-live-site-url.com)
+- Live Site URL: [Github Pages](https://rnamikaze.github.io/pricing-component-with-toggle-fm/)
 
 ## My process
 
