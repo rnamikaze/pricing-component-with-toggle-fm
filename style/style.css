@@ -254,6 +254,7 @@ main > .primary {
   body {
     height: max-content;
     align-items: center;
+    width: 100vw;
   }
   #bg-top {
     width: 100%;
