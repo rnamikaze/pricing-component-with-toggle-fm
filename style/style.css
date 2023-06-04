@@ -251,6 +251,7 @@ main > .primary {
   body {
     height: max-content;
     align-items: center;
+    overflow-x: hidden;
   }
   #bg-top {
     width: 100%;
